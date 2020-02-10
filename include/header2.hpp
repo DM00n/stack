@@ -15,11 +15,11 @@ template <typename T>
 class stack2
 {
 public:
-    stack(){
+    stack2(){
         _top = nullptr;
         count = 0;
     }
-    ~stack(){
+    ~stack2(){
         while (count) {
             Element<T>* _local = _top->previous;
             delete _top->previous;
