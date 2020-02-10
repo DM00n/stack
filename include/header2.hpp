@@ -1,9 +1,7 @@
-//
-// Created by dasta on 10.02.2020.
-//
+// Copyright 2018 Your Name <your_email>
 
-#ifndef LAB_05_STACK_HEADER2_HPP
-#define LAB_05_STACK_HEADER2_HPP
+#ifndef INCLUDE_HEADER2_HPP
+#define INCLUDE_HEADER2_HPP
 
 #include <iostream>
 
@@ -66,4 +64,4 @@ public:
     unsigned count;
 };
 
-#endif //LAB_05_STACK_HEADER2_HPP
+#endif //INCLUDE_HEADER2_HPP

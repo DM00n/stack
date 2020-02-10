@@ -1,7 +1,7 @@
 // Copyright 2018 Your Name <your_email>
 
-#ifndef TRY_HEADER_HPP
-#define TRY_HEADER_HPP
+#ifndef INCLUDE_HEADER1_HPP
+#define INCLUDE_HEADER1_HPP
 
 #include <iostream>
 
@@ -59,4 +59,4 @@ public:
     unsigned count;
 };
 
-#endif //TRY_HEADER_HPP
+#endif //INCLUDE_HEADER1_HPP
