@@ -7,6 +7,7 @@
 
 template <typename T>
 struct Element2{
+    Element2(){}
     T value;
     Element2<T>* previous;
 };
@@ -24,6 +25,7 @@ public:
             Element2<T>* _local = _top->previous;
             delete _top->previous;
             --count;
+            _top = _local;
         }
         delete _top;
     }
@@ -50,7 +52,7 @@ public:
         if (count) {
             Element2<T>* _stakan;
             _stakan = _top;
-            unsigned result = _top->value;
+            T result = _top->value;
             _top = _top->previous;
             delete _stakan;
             --count;

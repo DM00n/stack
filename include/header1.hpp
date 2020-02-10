@@ -7,6 +7,7 @@
 
 template <typename T>
 struct Element1{
+    Element1(){}
     T value;
     Element1<T>* previous;
 };
@@ -22,6 +23,7 @@ public:
         while (count) {
             Element1<T>* _local = _top->previous;
             delete _top->previous;
+            _top = _local;
             --count;
         }
         delete _top;
