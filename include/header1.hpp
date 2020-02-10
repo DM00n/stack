@@ -28,17 +28,17 @@ public:
         delete _top;
     }
     void push(T&& value){
-        Element1<T>* new_elem;
-        new_elem->previous = _top;
-        new_elem->value = value;
-        _top = new_elem;
+        Element1<T> new_elem;
+        new_elem.previous = _top;
+        new_elem.value = value;
+        _top = &new_elem;
         ++count;
     }
     void push(const T& value){
-        Element1<T>* new_elem;
-        new_elem->previous = _top;
-        new_elem->value = value;
-        _top = new_elem;
+        Element1<T> new_elem;
+        new_elem.previous = _top;
+        new_elem.value = value;
+        _top = &new_elem;
         ++count;
     }
     void pop(){
