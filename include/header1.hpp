@@ -7,7 +7,6 @@
 
 template <typename T>
 struct Element1{
-    Element1(){}
     T value;
     Element1<T>* previous;
 };

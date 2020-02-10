@@ -6,6 +6,10 @@
 
 class for_test2{
 public:
+    for_test2(){
+        square = 0;
+        volume = 0;
+    }
     for_test2(double a, double b, double c){
         square = a * b;
         volume = a * b * c;

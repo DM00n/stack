@@ -7,7 +7,6 @@
 
 template <typename T>
 struct Element2{
-    Element2(){}
     T value;
     Element2<T>* previous;
 };
@@ -59,7 +58,7 @@ public:
             return result;
         } else {
             std::cout << "stack is empty" << std::endl;
-            return -1;
+            exit(-1);
         }
     }
     Element2<T>* _top;
