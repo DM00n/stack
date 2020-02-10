@@ -22,7 +22,7 @@ public:
     ~stack2(){
         while (count) {
             Element2<T>* _local = _top->previous;
-            delete _top->previous;
+            delete _top;
             --count;
             _top = _local;
         }

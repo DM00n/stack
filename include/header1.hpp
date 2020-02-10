@@ -21,7 +21,7 @@ public:
     ~stack1(){
         while (count) {
             Element1<T>* _local = _top->previous;
-            delete _top->previous;
+            delete _top;
             _top = _local;
             --count;
         }
