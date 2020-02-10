@@ -1,18 +1,18 @@
 // Copyright 2018 Your Name <your_email>
 
-#ifndef INCLUDE_HEADER2_HPP
-#define INCLUDE_HEADER2_HPP
+#ifndef INCLUDE_HEADER2_HPP_
+#define INCLUDE_HEADER2_HPP_
 
 #include <iostream>
 
 template <typename T>
-struct Element{
+struct Element2{
     T value;
-    Element<T>* previous;
+    Element2<T>* previous;
 };
 
 template <typename T>
-class stack
+class stack2
 {
 public:
     stack(){
@@ -30,14 +30,14 @@ public:
     template <typename ... Args>
     void push_emplace(Args&&... value) {
         T _object(value ...);
-        auto* new_elem = new Element<T>;
+        auto* new_elem = new Element2<T>;
         new_elem->previous = _top;
         new_elem->value = _object;
         _top = new_elem;
         ++count;
     }
     void push(T&& value) {
-        auto* new_elem = new Element<T>;
+        auto* new_elem = new Element2<T>;
         new_elem->previous = _top;
         new_elem->value = value;
         _top = new_elem;
@@ -60,8 +60,8 @@ public:
             return -1;
         }
     }
-    Element<T>* _top;
+    Element2<T>* _top;
     unsigned count;
 };
 
-#endif //INCLUDE_HEADER2_HPP
+#endif //INCLUDE_HEADER2_HPP_

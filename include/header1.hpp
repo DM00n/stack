@@ -1,17 +1,17 @@
 // Copyright 2018 Your Name <your_email>
 
-#ifndef INCLUDE_HEADER1_HPP
-#define INCLUDE_HEADER1_HPP
+#ifndef INCLUDE_HEADER1_HPP_
+#define INCLUDE_HEADER1_HPP_
 
 #include <iostream>
 
 template <typename T>
-struct Element{
+struct Element1{
     T value;
-    Element<T>* previous;
+    Element1<T>* previous;
 };
 template <typename T>
-class stack
+class stack1
 {
 public:
     stack(){
@@ -20,21 +20,21 @@ public:
     }
     ~stack(){
         while (count) {
-            Element<T>* _local = _top->previous;
+            Element1<T>* _local = _top->previous;
             delete _top->previous;
             --count;
         }
         delete _top;
     }
     void push(T&& value){
-        auto* new_elem = new Element<T>;
+        auto* new_elem = new Element1<T>;
         new_elem->previous = _top;
         new_elem->value = value;
         _top = new_elem;
         ++count;
     }
     void push(const T& value){
-        auto* new_elem = new Element<T>;
+        auto* new_elem = new Element1<T>;
         new_elem->previous = _top;
         new_elem->value = value;
         _top = new_elem;
@@ -42,7 +42,7 @@ public:
     }
     void pop(){
         if (count) {
-            Element<T>* stakan;
+            Element1<T>* stakan;
             stakan = _top;
             std::cout << _top->value << std::endl;
             _top = _top->previous;
@@ -55,8 +55,8 @@ public:
     const T& head() const{
         return _top->value;
     }
-    Element<T>* _top;
+    Element1<T>* _top;
     unsigned count;
 };
 
-#endif //INCLUDE_HEADER1_HPP
+#endif //INCLUDE_HEADER1_HPP_
