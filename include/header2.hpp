@@ -31,14 +31,14 @@ public:
     template <typename ... Args>
     void push_emplace(Args&&... value) {
         T _object(value ...);
-        auto* new_elem = new Element2<T>;
+        Element2<T>* new_elem;
         new_elem->previous = _top;
         new_elem->value = _object;
         _top = new_elem;
         ++count;
     }
     void push(T&& value) {
-        auto* new_elem = new Element2<T>;
+        Element2<T>* new_elem;
         new_elem->previous = _top;
         new_elem->value = value;
         _top = new_elem;
