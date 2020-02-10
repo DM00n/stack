@@ -6,11 +6,11 @@
 
 class for_test2{
 public:
-    for_test(double a, double b, double c){
+    for_test2(double a, double b, double c){
         square = a * b;
         volume = a * b * c;
     }
-    for_test(double a, double b){
+    for_test2(double a, double b){
         square = a * b;
         volume = 0;
     }
@@ -21,7 +21,7 @@ public:
 TEST(task1, EmptyTest) {
 unsigned a = 516;
 
-stack<unsigned> mystk;
+stack1<unsigned> mystk;
 mystk.push(a);
 mystk.push(2314);
 
@@ -31,7 +31,7 @@ EXPECT_EQ(mystk.head(), 516);
 }
 
 TEST(task1, EmptyTest) {
-stack<for_test2> mytest;
+stack2<for_test2> mytest;
 mytest.push(for_test2(3, 4));
 mytest.push_emplace(3, 4, 7);
 EXPECT_EQ(mytest.head().volume, 84);
