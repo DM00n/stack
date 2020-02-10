@@ -53,7 +53,6 @@ public:
             _stakan = _top;
             T result = _top->value;
             _top = _top->previous;
-            delete _stakan;
             --count;
             return result;
         } else {

@@ -47,7 +47,6 @@ public:
             stakan = _top;
             std::cout << _top->value << std::endl;
             _top = _top->previous;
-            delete stakan;
             --count;
         } else {
             std::cout << "stack is empty" << std::endl;
