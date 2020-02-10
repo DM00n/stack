@@ -30,7 +30,7 @@ mystk.pop();
 EXPECT_EQ(mystk.head(), 516);
 }
 
-TEST(task1, EmptyTest) {
+TEST(task2, EmptyTest) {
 stack2<for_test2> mytest;
 mytest.push(for_test2(3, 4));
 mytest.push_emplace(3, 4, 7);
