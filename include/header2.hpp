@@ -40,7 +40,7 @@ public:
     void push(T&& value) {
         Element2<T> new_elem;
         new_elem.previous = _top;
-        new_elem.value = _object;
+        new_elem.value = value;
         _top = &new_elem;
         ++count;
     }
