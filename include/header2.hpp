@@ -21,7 +21,7 @@ public:
     }
     ~stack2(){
         while (count) {
-            Element<T>* _local = _top->previous;
+            Element2<T>* _local = _top->previous;
             delete _top->previous;
             --count;
         }
@@ -48,7 +48,7 @@ public:
     }
     T pop() {
         if (count) {
-            Element<T>* _stakan;
+            Element2<T>* _stakan;
             _stakan = _top;
             unsigned result = _top->value;
             _top = _top->previous;
