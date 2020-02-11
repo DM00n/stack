@@ -23,10 +23,9 @@ public:
 };
 
 TEST(task1, EmptyTest) {
-
 stack1<std::string> mystk;
 mystk.push("privetstvuyu");
-mystk.push("2314");
+mystk.push("2314")
 
 EXPECT_EQ(mystk.head(), "2314");
 mystk.pop();
