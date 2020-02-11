@@ -23,10 +23,9 @@ public:
 };
 
 TEST(task1, EmptyTest) {
-std::string a = "privetstvuyu";
 
 stack1<std::string> mystk;
-mystk.push(a);
+mystk.push("privetstvuyu");
 mystk.push("2314");
 
 EXPECT_EQ(mystk.head(), "2314");
