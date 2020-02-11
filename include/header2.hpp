@@ -38,9 +38,7 @@ public:
         ++count;
     }
     void push(T&& value) {
-        auto* new_elem = new Element2<T>;
-        new_elem->previous = _top;
-        new_elem->value = std::move(value);
+        auto* new_elem = new Element2<T>{std::move(value), _top};
         _top = new_elem;
         ++count;
     }
