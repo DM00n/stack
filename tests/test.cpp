@@ -36,7 +36,8 @@ EXPECT_EQ(mystk.head(), 516);
 
 TEST(task2, EmptyTest) {
 stack2<for_test2> mytest;
-mytest.push(for_test2(3, 4));
+double a = 3, b = 4;
+mytest.push(for_test2(a, b));
 mytest.push_emplace(3, 4, 7);
 EXPECT_EQ(mytest.head().volume, 84);
 mytest.pop();
