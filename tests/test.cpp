@@ -23,7 +23,7 @@ public:
 };
 
 TEST(task1, EmptyTest) {
-std::string a = "privetstvuyu";
+std::string a("privetstvuyu");
 
 stack1<std::string> mystk;
 mystk.push(a);
