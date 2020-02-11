@@ -32,6 +32,11 @@ mystk.push(2314);
 EXPECT_EQ(mystk.head(), 2314);
 mystk.pop();
 EXPECT_EQ(mystk.head(), 516);
+
+EXPECT_EQ(std::is_move_constructible<stack1<double>>::value, true);
+EXPECT_EQ(std::is_move_assignable<stack1<double>>::value, true);
+EXPECT_EQ(std::is_copy_constructible<stack1<double>>::value, false);
+EXPECT_EQ(std::is_copy_assignable<stack1<double>>::value, false);
 }
 
 TEST(task2, EmptyTest) {
@@ -42,4 +47,9 @@ mytest.push_emplace(3, 4, 7);
 EXPECT_EQ(mytest.head().volume, 84);
 mytest.pop();
 EXPECT_EQ(mytest.head().square, 12);
+
+EXPECT_EQ(std::is_move_constructible<stack2<double>>::value, true);
+EXPECT_EQ(std::is_move_assignable<stack2<double>>::value, true);
+EXPECT_EQ(std::is_copy_constructible<stack2<double>>::value, false);
+EXPECT_EQ(std::is_copy_assignable<stack2<double>>::value, false);
 }
