@@ -25,7 +25,7 @@ public:
 TEST(task1, EmptyTest) {
 std::string a = "privetstvuyu";
 
-stack1<unsigned> mystk;
+stack1<std::string> mystk;
 mystk.push(a);
 mystk.push("2314");
 
@@ -33,8 +33,8 @@ EXPECT_EQ(mystk.head(), "2314");
 mystk.pop();
 EXPECT_EQ(mystk.head(), "privetstvuyu");
 
-EXPECT_EQ(std::is_move_constructible<stack1<double>>::value, true);
-EXPECT_EQ(std::is_move_assignable<stack1<double>>::value, true);
+EXPECT_EQ(std::is_move_constructible<stack1<std::string>>::value, true);
+EXPECT_EQ(std::is_move_assignable<stack1<std::string>>::value, true);
 }
 
 TEST(task2, EmptyTest) {

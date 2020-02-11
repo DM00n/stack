@@ -2,7 +2,7 @@
 
 #ifndef INCLUDE_HEADER2_HPP_
 #define INCLUDE_HEADER2_HPP_
-
+#define STACK_END -1
 #include <iostream>
 
 template <typename T>
@@ -58,7 +58,7 @@ public:
             return result;
         } else {
             std::cout << "stack is empty" << std::endl;
-            exit(-1);
+            exit(STACK_END);
         }
     }
     Element2<T>* _top;
