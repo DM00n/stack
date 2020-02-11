@@ -40,7 +40,7 @@ public:
     void push(T&& value) {
         auto* new_elem = new Element2<T>;
         new_elem->previous = _top;
-        new_elem->value = value;
+        new_elem->value = std::move(value);
         _top = new_elem;
         ++count;
     }
